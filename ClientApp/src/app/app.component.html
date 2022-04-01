@@ -1,5 +1,11 @@
 <body>
     <div class="container">
-        <app-remote-control></app-remote-control>
+        <div>
+            <div>Run and install application on your phone</div>
+            <qrcode [qrdata]="applicationUrl" [width]="128" [errorCorrectionLevel]="'M'"></qrcode>
+        </div>
+        <div>
+            <app-remote-control></app-remote-control>
+        </div>
     </div>
 </body>

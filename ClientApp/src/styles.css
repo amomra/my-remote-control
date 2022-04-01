@@ -1,5 +1,4 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~font-awesome/css/font-awesome.min.css';
 
 /* Provide sufficient contrast against white background */
 a {
@@ -14,4 +13,17 @@ code {
     color: #fff;
     background-color: #1b6ec2;
     border-color: #1861ac;
+}
+
+[spacer] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+[spacer-15] {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 15px;
+    flex: 1 1 15px;
+    max-width: 15px;
 }

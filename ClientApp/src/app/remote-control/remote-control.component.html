@@ -1,31 +1,36 @@
 <div class="phone-container">
-    <div>
-        <button (click)="prev()">
+    <div class="button-row">
+        <button class="btn btn-secondary" (click)="prev()">
             <span class="fa fa-fast-backward"></span>
         </button>
-        <button (click)="play()">
+        <button class="btn btn-success" (click)="play()">
             <span class="fa fa-play"></span>
         </button>
-        <button (click)="next()">
+        <button class="btn btn-secondary" (click)="next()">
             <span class="fa fa-fast-forward"></span>
+        </button>
+        <span spacer-15></span>
+        <button class="btn btn-danger" (click)="stop()">
+            <span class="fa fa-stop"></span>
         </button>
     </div>
 
-    <div>
-        <button (click)="volumeDown()">
+    <div class="button-row">
+        <button class="btn btn-outline-primary" (click)="volumeDown()">
             <span class="fa fa-volume-down"></span>
         </button>
-        <button (click)="volumeUp()">
+        <button class="btn btn-outline-primary" (click)="volumeUp()">
             <span class="fa fa-volume-up"></span>
         </button>
-        <button (click)="mute()">
+        <span spacer-15></span>
+        <button class="btn btn-outline-danger" (click)="mute()">
             <span class="fa fa-volume-off"></span>
         </button>
     </div>
 
-    <div>
-        <button (click)="fullscreen()">
-            <span>Tela cheia</span>
+    <div class="button-row">
+        <button class="btn btn-outline-secondary" (click)="fullscreen()">
+            <span>Toggle fullscreen</span>
         </button>
     </div>
 </div>
