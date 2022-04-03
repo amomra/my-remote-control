@@ -4,7 +4,7 @@ namespace MyRemoteControl.Services
     {
         VK_SPACE = 0x20,
 
-        VK_F = 0x41,
+        VK_F = 0x46,
 
         VK_VOLUME_MUTE = 0xAD,
         VK_VOLUME_DOWN = 0xAE,
