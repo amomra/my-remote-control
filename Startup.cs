@@ -24,6 +24,9 @@ namespace MyRemoteControl
             // adiciona os serviços do teclado
             services.AddSingleton<KeyboardService>();
 
+            // adiciona os serviços do player
+            services.AddSingleton<PlayerService>();
+
             services.AddControllersWithViews();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>

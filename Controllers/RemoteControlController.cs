@@ -7,75 +7,80 @@ namespace MyRemoteControl.Controllers
     [Route("/api/remotecontrol")]
     public class RemoteControlController : ControllerBase
     {
-        private KeyboardService keyboardService;
+        private PlayerService playerService;
 
-        public RemoteControlController(KeyboardService keyboardService)
+        public RemoteControlController(PlayerService playerService)
         {
-            this.keyboardService = keyboardService;
+            this.playerService = playerService;
         }
 
         [HttpPost("play")]
         public IActionResult Play()
         {
-            // envia um comando para play ou pause
-            this.keyboardService.SendKey(VirtualKey.VK_MEDIA_PLAY_PAUSE);
+            this.playerService.Play();
             return Ok();
         }
 
         [HttpPost("stop")]
         public IActionResult Stop()
         {
-            // envia um comando para parar
-            this.keyboardService.SendKey(VirtualKey.VK_MEDIA_STOP);
+            this.playerService.Stop();
             return Ok();
         }
 
         [HttpPost("prev")]
         public IActionResult PreviousTrack()
         {
-            // envia um comando para faixa anterior
-            this.keyboardService.SendKey(VirtualKey.VK_MEDIA_PREV_TRACK);
+            this.playerService.PreviousTrack();
             return Ok();
         }
 
         [HttpPost("next")]
         public IActionResult NextTrack()
         {
-            // envia um comando para próxima faixa
-            this.keyboardService.SendKey(VirtualKey.VK_MEDIA_NEXT_TRACK);
+            this.playerService.NextTrack();
+            return Ok();
+        }
+
+        [HttpPost("forward")]
+        public IActionResult Forward()
+        {
+            this.playerService.Forward();
+            return Ok();
+        }
+
+        [HttpPost("backward")]
+        public IActionResult Backward()
+        {
+            this.playerService.Backward();
             return Ok();
         }
 
         [HttpPost("volumeUp")]
         public IActionResult VolumeUp()
         {
-            // envia um comando para aumentar volume
-            this.keyboardService.SendKey(VirtualKey.VK_VOLUME_UP);
+            this.playerService.VolumeUp();
             return Ok();
         }
 
         [HttpPost("volumeDown")]
         public IActionResult VolumeDown()
         {
-            // envia um comando para abaixar volume
-            this.keyboardService.SendKey(VirtualKey.VK_VOLUME_DOWN);
+            this.playerService.VolumeDown();
             return Ok();
         }
 
         [HttpPost("mute")]
         public IActionResult Mute()
         {
-            // envia um comando para mutar
-            this.keyboardService.SendKey(VirtualKey.VK_VOLUME_MUTE);
+            this.playerService.Mute();
             return Ok();
         }
 
         [HttpPost("fullscreen")]
         public IActionResult Fullscreen()
         {
-            // envia um comando para apertar a tecla F, o que faz com que os players de video
-            // ativem a tela cheia
-            this.keyboardService.SendKey(VirtualKey.VK_F);
+            this.playerService.Fullscreen();
             return Ok();
         }
     }

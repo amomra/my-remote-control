@@ -1,36 +1,44 @@
 <div class="phone-container">
-    <div class="button-row">
-        <button class="btn btn-secondary" (click)="prev()">
-            <span class="fa fa-fast-backward"></span>
-        </button>
-        <button class="btn btn-success" (click)="play()">
-            <span class="fa fa-play"></span>
-        </button>
-        <button class="btn btn-secondary" (click)="next()">
-            <span class="fa fa-fast-forward"></span>
-        </button>
-        <span spacer-15></span>
-        <button class="btn btn-danger" (click)="stop()">
-            <span class="fa fa-stop"></span>
-        </button>
-    </div>
+    <div class="player">
+        <div class="button-row">
+            <button class="player-btn btn btn-secondary" (click)="prev()">
+                <span class="fa fa-fast-backward"></span>
+            </button>
+            <button class="player-btn btn btn-secondary" (click)="backward()">
+                <span class="fa fa-backward"></span>
+            </button>
+            <button class="player-btn btn btn-success" (click)="play()">
+                <span class="fa fa-play"></span>
+            </button>
+            <button class="player-btn btn btn-secondary" (click)="forward()">
+                <span class="fa fa-forward"></span>
+            </button>
+            <button class="player-btn btn btn-secondary" (click)="next()">
+                <span class="fa fa-fast-forward"></span>
+            </button>
+        </div>
 
-    <div class="button-row">
-        <button class="btn btn-outline-primary" (click)="volumeDown()">
-            <span class="fa fa-volume-down"></span>
-        </button>
-        <button class="btn btn-outline-primary" (click)="volumeUp()">
-            <span class="fa fa-volume-up"></span>
-        </button>
-        <span spacer-15></span>
-        <button class="btn btn-outline-danger" (click)="mute()">
-            <span class="fa fa-volume-off"></span>
-        </button>
-    </div>
+        <div class="button-row">
+            <button class="player-btn btn btn-outline-primary" (click)="volumeDown()">
+                <span class="fa fa-volume-down"></span>
+            </button>
+            <button class="player-btn btn btn-outline-primary" (click)="volumeUp()">
+                <span class="fa fa-volume-up"></span>
+            </button>
+            <span spacer-15></span>
+            <button class="player-btn btn btn-outline-danger" (click)="mute()">
+                <span class="fa fa-volume-off"></span>
+            </button>
+            <span spacer-15></span>
+            <button class="player-btn btn btn-danger" (click)="stop()">
+                <span class="fa fa-stop"></span>
+            </button>
+        </div>
 
-    <div class="button-row">
-        <button class="btn btn-outline-secondary" (click)="fullscreen()">
-            <span>Toggle fullscreen</span>
-        </button>
+        <div class="button-row">
+            <button class="player-btn btn btn-outline-secondary" (click)="fullscreen()">
+                <span>Toggle fullscreen</span>
+            </button>
+        </div>
     </div>
 </div>

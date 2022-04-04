@@ -1,17 +1,14 @@
 import { RemoteControlService } from './remote-control.service';
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-remote-control',
     templateUrl: './remote-control.component.html',
     styleUrls: ['./remote-control.component.css']
 })
-export class RemoteControlComponent implements OnInit {
+export class RemoteControlComponent {
 
     constructor(private remoteControlService: RemoteControlService) {
-    }
-
-    ngOnInit() {
     }
 
     play() {
@@ -28,6 +25,14 @@ export class RemoteControlComponent implements OnInit {
 
     next() {
         this.remoteControlService.next();
+    }
+
+    backward() {
+        this.remoteControlService.backward();
+    }
+
+    forward() {
+        this.remoteControlService.forward();
     }
 
     volumeUp() {

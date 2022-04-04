@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
     providedIn: 'root'
 })
 export class RemoteControlService {
-
+    
     get baseEndpoint(): string {
         return 'api/remotecontrol';
     }
@@ -27,6 +27,14 @@ export class RemoteControlService {
 
     next() {
         return this.httpClient.post(`${this.baseEndpoint}/next`, {}).toPromise();
+    }
+
+    backward() {
+        return this.httpClient.post(`${this.baseEndpoint}/backward`, {}).toPromise();
+    }
+
+    forward() {
+        return this.httpClient.post(`${this.baseEndpoint}/forward`, {}).toPromise();
     }
 
     volumeUp() {
