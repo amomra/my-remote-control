@@ -1,0 +1,7 @@
+<div class="alert alert-{{model?.type}} alert-dismissible fade show" role="alert">
+    <span>{{model?.message}}</span>
+
+    <button #closeButtonElem type="button" class="close" data-dismiss="alert" aria-label="Fechar" (click)="closeButtonClick()">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>

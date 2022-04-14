@@ -8,6 +8,13 @@
     text-align: center;
 }
 
+.notification-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
 /* para telas de dispositivos móveis */
 @media only screen and (hover: none) and (pointer: coarse){
     /* esconde as informações de instalação se tiver em um disposito móvel */

@@ -7,11 +7,15 @@ import { RemoteControlComponent } from './remote-control/remote-control.componen
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { QRCodeModule } from 'angularx-qrcode';
+import { NotificationContainerComponent } from './notification-container/notification-container.component';
+import { AlertComponent } from './notification-container/alert.component';
 
 @NgModule({
     declarations: [
         AppComponent,
-        RemoteControlComponent
+        RemoteControlComponent,
+        NotificationContainerComponent,
+        AlertComponent
     ],
     imports: [
         BrowserModule,

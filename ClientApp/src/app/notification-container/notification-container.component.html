@@ -1,0 +1,6 @@
+<div class="alert-container">
+    <app-alert *ngFor="let alertMessage of alertMessages"
+        [model]="alertMessage"
+        (closed)="removeAlert($event)">
+    </app-alert>
+</div>
